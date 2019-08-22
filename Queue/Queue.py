@@ -54,6 +54,10 @@ class Queue:
             temp = temp.next
             count += 1
         return count
+    
+    def is_empty(self):
+        size = self.size()
+        return False if size else True
 
     def search(self, data):
         if not self.head:

@@ -51,6 +51,10 @@ class LinkedList:
             count += 1
             temp = temp.next
         return count
+    
+    def is_empty(self):
+        size = self.size()
+        return False if size else True
 
     def delete(self, data):
         temp = self.head

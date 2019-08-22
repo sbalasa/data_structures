@@ -57,6 +57,17 @@ class Stack:
             except AttributeError:
                 print(-1)
 
+    def get_data(self, pos):
+        temp = self.head
+        count = 0
+        try:
+            while count != pos:
+                temp = temp.next
+                count += 1
+            print(temp.data)
+        except AttributeError:
+            print(-1)
+
     def clear(self):
         self.head = None
 
@@ -70,5 +81,6 @@ if __name__ == "__main__":
     s.pop()
     s.search(5)
     s.display()
+    s.get_data(1)
     s.clear()
     s.display()

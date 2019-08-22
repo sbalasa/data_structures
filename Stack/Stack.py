@@ -21,9 +21,12 @@ class Stack:
     def pop(self):
         if not self.head:
             print("Stack is Empty")
-        data = self.head.data
-        self.head = self.head.next
-        return data
+        try:
+            data = self.head.data
+            self.head = self.head.next
+            return data
+        except AttributeError:
+            pass
 
     def display(self):
         if not self.head:
@@ -43,6 +46,10 @@ class Stack:
             count += 1
         return count
 
+    def is_empty(self):
+        size = self.size()
+        return False if size else True
+    
     def search(self, data):
         if not self.head:
             print(-1)
